@@ -1,7 +1,8 @@
 ## LineBot use gin & mongodb
+package
 1. go get -u github.com/gin-gonic/gin
 2. go get go.mongodb.org/mongo-driver/mongo
-
+3. go get -u github.com/line/line-bot-sdk-go/v7/linebot
 
 TestImg
 
