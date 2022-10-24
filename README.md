@@ -19,7 +19,7 @@ TestImg
 ![cmd](https://user-images.githubusercontent.com/89484381/197419428-415e4711-c16a-4455-8889-6b5a050489cc.jpg)
 
 待處理項目
-2. Mes struct重新設計
+1. Mes struct重新設計
 
 v.1.1
 1. 修改GET API格式更符合RestFul設計模式
