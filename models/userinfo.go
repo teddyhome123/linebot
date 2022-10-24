@@ -12,7 +12,7 @@ import (
 type UserMesInfo struct {
 	UserID  string `json:"userid" bson:"userid"`
 	MesTime string `json:"mestime" bson:"mesTime"`
-	Message string `json:"message" bson:"messages"`
+	Message string `json:"message" bson:"message"`
 }
 
 // insert一筆資料
@@ -25,6 +25,25 @@ func InsertUserInfo(ub *UserMesInfo) error {
 	}
 	//fmt.Printf("Inserted document with _id: %v\n", result.InsertedID)
 	return nil
+}
+
+// select All 所有訊息
+func GetAllMessage() ([]primitive.D, error) {
+	coll := utils.MongoDB.Collection("userinfo_mes")
+
+	filter := bson.D{}
+
+	cursor, err := coll.Find(context.TODO(), filter)
+	if err != nil {
+		return nil, err
+	}
+
+	var results []bson.D
+	if err = cursor.All(context.TODO(), &results); err != nil {
+		return nil, err
+	}
+
+	return results, nil
 }
 
 // select User 所有訊息

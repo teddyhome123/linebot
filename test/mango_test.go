@@ -15,7 +15,8 @@ import (
 func TestDb(t *testing.T) {
 	fmt.Println("testdb")
 	//t.Run("Find", testFind)
-	t.Run("獲取:", testGetMessageByUserID)
+	//t.Run("獲取:", testGetMessageByUserID)
+	t.Run("獲取All:", testGetAllMessage)
 }
 
 func testFind(t *testing.T) {
@@ -33,7 +34,14 @@ func testFind(t *testing.T) {
 }
 
 func testGetMessageByUserID(t *testing.T) {
-	res := models.GetMessageByUserID("Ue77abf9b8c942c140f04554d95367db0")
+	res, _ := models.GetMessageByUserID("Ue77abf9b8c942c140f04554d95367db0")
+	for _, v := range res {
+		fmt.Println(v)
+	}
+}
+
+func testGetAllMessage(t *testing.T) {
+	res, _ := models.GetAllMessage()
 	for _, v := range res {
 		fmt.Println(v)
 	}

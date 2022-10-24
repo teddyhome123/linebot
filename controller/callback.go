@@ -3,6 +3,7 @@ package controller
 import (
 	"linebotim/models"
 	"linebotim/services"
+	"linebotim/utils"
 	"log"
 	"net/http"
 
@@ -12,10 +13,14 @@ import (
 
 // linebot接收
 func Callback(c *gin.Context) {
+	config, err := utils.LoadConfig("./.")
+	if err != nil {
+		log.Fatal("load config err = ", err)
+	}
 
 	bot, err := linebot.New(
-		"e448b3588974cb7a8f0ec8086b3df5b2",
-		"dqBvQ+aHd2Mnw4ga+JswaFuMbFBqrX+neVVv0ogcdvPeDWjccHshmD5hll7jhpJcuEPBRhrWFuBj1YRMXLWJZCf7Y8lGF8c+BMgPvnwb8NyymHKA7/X92YfqZKts4UpXKRV41QzlensLoq11j9YenAdB04t89/1O/w1cDnyilFU=",
+		config.ChannelSecret,
+		config.ChannelToken,
 	)
 	if err != nil {
 		log.Fatal(err)
