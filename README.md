@@ -24,4 +24,4 @@ TestImg
 v.1.1
 1. 修改GET API格式更符合RestFul設計模式
 2. 時間現在能正確顯示(完成)
-3. appenv環境變數設置完成
+3. app.env環境變數設置完成
