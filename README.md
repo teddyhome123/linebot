@@ -16,8 +16,7 @@ TestImg
 3. main.exe request & response
 ![cmd](https://user-images.githubusercontent.com/89484381/197419428-415e4711-c16a-4455-8889-6b5a050489cc.jpg)
 
-
-待修項目
+待處理項目
 1. 環境變數設置
 2. Mes struct重新設計
 3. 時間格式跑掉
