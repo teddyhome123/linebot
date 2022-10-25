@@ -12,7 +12,8 @@ TestImg
   ![insertjpg](https://user-images.githubusercontent.com/89484381/197419383-b8041b0d-624b-4137-b06d-b2fc8f05dc40.jpg)
   
 2. Get User & UserMessage (Postman)
-  ![getuser02](https://user-images.githubusercontent.com/89484381/197738830-5b671a78-f878-45e5-bca5-b9b4bf6cbece.jpg)
+  ![getuser2](https://user-images.githubusercontent.com/89484381/197776741-2b3ef6f7-4f4a-4420-b25d-26b9af930069.jpg)
+
 
 
 
