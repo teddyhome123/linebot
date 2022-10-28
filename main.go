@@ -11,7 +11,6 @@ func main() {
 	if err != nil {
 		log.Fatal("load config err = ", err)
 	}
-
 	e := router.Router()
 	e.Run(config.ServerAddress)
 }
